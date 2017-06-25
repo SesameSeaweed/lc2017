@@ -14,7 +14,6 @@ public class AddStrings415 {
 
         while(m >= 0 && n >= 0) {
         	int temp = num2.charAt(n--) - '0' + num1.charAt(m--) - '0' + carry;
-        	System.out.println(temp);
         	sb.append(temp % 10);
         	carry = temp / 10;
         }
