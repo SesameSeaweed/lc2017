@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class MaxSquare221 {
     public static int maximalSquare(char[][] matrix) {
     	if(matrix == null || matrix.length == 0) return 0;
