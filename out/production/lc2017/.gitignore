@@ -1,0 +1,14 @@
+.idea/
+.settings/
+.externalToolBuilders/
+dependency-reduced-pom.xml
+.project
+.classpath
+.settings/
+target/
+test-output/
+*.log
+bin/
+.idea
+*.iml
+*.class

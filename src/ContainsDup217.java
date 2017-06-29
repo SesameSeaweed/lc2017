@@ -2,7 +2,7 @@ import java.util.Set;
 import java.util.HashSet;
 
 public class ContainsDup217 {
-    public static boolean containsDuplicate(int[] nums) {
+    private static boolean containsDuplicate(int[] nums) {
         Set<Integer> set = new HashSet<>();
         for(int num : nums) {
         	if(set.contains(num)) return true;

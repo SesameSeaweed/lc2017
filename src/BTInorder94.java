@@ -3,7 +3,7 @@ import java.util.List;
 import java.util.ArrayList;
 
 public class BTInorder94 {
-	public static class TreeNode {
+	private static class TreeNode {
       int val;
       TreeNode left;
       TreeNode right;
