@@ -1,7 +1,9 @@
 package google;
 
-/**
- * Created by pxu on 7/2/17.
- */
 public class TrappingWater407 {
+
+
+    public static void main(String[] args) {
+        
+    }
 }
