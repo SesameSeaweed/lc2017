@@ -5,7 +5,7 @@ import java.util.List;
 
 public class BinaryTreePath257 {
 
-    public static class TreeNode {
+    private static class TreeNode {
       int val;
       TreeNode left;
       TreeNode right;
