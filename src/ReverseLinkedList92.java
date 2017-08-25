@@ -10,19 +10,47 @@ public class ReverseLinkedList92 {
 
     public static ListNode reverseBetween(ListNode head, int m, int n) {
         int i = 1;
-        ListNode curr = head;
+        ListNode curr = new ListNode(0);
+        curr.next = head;
         ListNode firstTail = new ListNode(0);
+        ListNode secondHead = new ListNode(0);
+        ListNode secondTail = new ListNode(0);
+        ListNode thirdHead = new ListNode(0);
         firstTail.next = curr;
         while(i < m) {
             curr = curr.next;
             i++;
         }
-
-        while(i < n) {
-
+        firstTail = curr;
+        secondHead = curr.next;
+        while(i <= n) {
+            curr = curr.next;
+            i++;
         }
+        secondTail = curr;
+        thirdHead = curr.next;
+        secondTail.next = null;
 
-        return head;
+        ListNode newHead = reverse(secondHead);
+        firstTail.next = newHead;
+        while(newHead != null && newHead.next != null) {
+            newHead = newHead.next;
+        }
+        newHead.next = thirdHead;
+
+        return firstTail.val == 0 ? firstTail.next : head;
+    }
+
+    private static ListNode reverse(ListNode head) {
+        ListNode prev = null;
+        ListNode curr = head;
+        while(curr != null) {
+            ListNode next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+        return prev;
     }
 
     public static void main(String[] args) {
@@ -37,7 +65,7 @@ public class ReverseLinkedList92 {
         l3.next = l4;
         l4.next = l5;
 
-        ListNode head = reverseBetween(l1, 2, 4);
+        ListNode head = reverseBetween(l1, 1,2);
         while (head != null) {
             System.out.print(head.val);
             head = head.next;
